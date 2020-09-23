@@ -12,6 +12,7 @@ const gateway = braintree.connect({
 exports.generateToken = (req, res) => {
     gateway.clientToken.generate({}, function(err, response) {
         if (err) {
+            console.log(500);
             res.status(500).send(err);
         } else {
             res.send(response);

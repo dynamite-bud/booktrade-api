@@ -14,6 +14,30 @@ const productSchema = new mongoose.Schema(
             required: true,
             maxlength: 2000
         },
+        author: {
+            type: String,
+            required: false,
+            maxlength: 200
+        },
+        publisher : {
+            type: String,
+            required: false,
+            maxlength: 200
+        },
+        pubYear: {
+            type: Number,
+            required: false,
+        },
+        isbn: {
+            type: Number,
+            required: false,
+        },
+        condition:{
+            type: String,
+            required: false,
+            default: 'used',
+            maxlength: 200
+        },
         price: {
             type: Number,
             trim: true,
